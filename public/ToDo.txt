@@ -1,0 +1,7 @@
+A faire pour le site :
+
+- lecture d'un fichier externe pour la localisation,
+- n'afficher que les X derniers points
+- mode random de la galerie
+- formulaire envoyable 
+- page d'accueil après hébergement du site
