@@ -18,7 +18,7 @@
     </noscript>
     <!-- AOS : Animate on Scroll https://github.com/michalsnik/aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/icon/favicon.ico">
 </head>
 
 <body class="homepage is-preload light-bg">
@@ -117,27 +117,27 @@
             <div id="expanding_flex_cards" data-aos="fade-down-left">
                 <div class="container_cards">
                     <div class="panel active"
-                        style="background-image: url(images/web_hosting/20201018_P1110770_900px.jpg)">
+                        style="background-image: url(images/flex_cards/20201018_P1110770_900px.jpg)">
                         <h3>Dunes de sable</h3>
                     </div>
-                    <div class="panel" style="background-image: url(images/web_hosting/P1100143_900px.jpg)">
+                    <div class="panel" style="background-image: url(images/flex_cards/P1100143_900px.jpg)">
                         <h3>Coquelicot & blé</h3>
                     </div>
-                    <div class="panel" style="background-image: url(images/web_hosting/IMG_1978_900px.jpg)">
+                    <div class="panel" style="background-image: url(images/flex_cards/IMG_1978_900px.jpg)">
                         <h3>Un "simple" bateau</h3>
                     </div>
-                    <div class="panel" style="background-image: url(images/web_hosting/IMG_5367_900px.jpg)">
+                    <div class="panel" style="background-image: url(images/flex_cards/IMG_5367_900px.jpg)">
                         <h3>Réflexion...</h3>
                     </div>
                     <div class="panel"
-                        style="background-image: url(images/web_hosting/20211223_P1140859-Modifier_900px.jpg)">
+                        style="background-image: url(images/flex_cards/20211223_P1140859-Modifier_900px.jpg)">
                         <h3>Un goût d'automne</h3>
                     </div>
-                    <div class="panel" style="background-image: url(images/web_hosting/20201018_P1110730_900px.jpg)">
+                    <div class="panel" style="background-image: url(images/flex_cards/20201018_P1110730_900px.jpg)">
                         <h3>Fleur généreuse</h3>
                     </div>
                     <div class="panel"
-                        style="background-image: url(images/web_hosting/20211225_P1140943-Modifier-DeNoiseAI-low-light_900px.jpg)">
+                        style="background-image: url(images/flex_cards/20211225_P1140943-Modifier-DeNoiseAI-low-light_900px.jpg)">
                         <h3>Old Watson</h3>
                     </div>
 
@@ -378,8 +378,6 @@
                 flyCoordinates = jsonObject.features[data.features.length - 1].geometry.coordinates; // last json point referenced
             });
 
-
-
         // Show only last one month points for Mapbox
         function substractMonths(numOfMonths, date = new Date()) {
             date.setMonth(date.getMonth() - numOfMonths);
@@ -387,7 +385,6 @@
         }
         // 👇️ Subtract 12 Month from current Date
         const result = substractMonths(12).toISOString().slice(0, 10);
-
 
         map.on('load', function () {
             map.setFog({
@@ -401,8 +398,8 @@
 
             // Add an image to use as a custom marker
             map.loadImage(
-                // 'images/map_marker.png',
-                'images/silhouette_couple_hiking_blue_small.png',
+                // 'images/icon/map_marker.png',
+                'images/icon/silhouette_couple_hiking_blue_small.png',
                 (error, image) => {
                     if (error) throw error;
 

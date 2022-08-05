@@ -1,0 +1,64 @@
+¿ Where am I ?
+
+Welcome home ♫
+
+Mon espace dédié au voyage
+
+https://www.youtube.com/watch?v=lilcujUeO-Q
+
+
+Citations :
+
+« La photographie embellit la misère en l’habillant de lumière. »
+
+Rémy Donnadieu
+
+« Il vient une heure où protester ne suffit plus, après la philosophie, il faut l’action. »
+
+Victor hugo
+
+« Je ressens moins de danger à saisir l’intimité des animaux sauvages qu’à vivre parmi les hommes. »
+
+Laurent baheux
+
+
+------------ Start localhost:8080 -------------
+
+You can run your file in http-server.
+
+1> Have Node.js installed in your system.
+
+npm install http-server si pas déjà fait
+
+2> In CMD, run the command npm install http-server -g
+
+3> Navigate to the specific path of your file folder in CMD and run the command http-server
+
+4> Go to your browser and type localhost:8080. Your Application should run there.
+
+Thanks:)
+
+-----------------------------------------------
+
+Pour centrer un élément : 
+
+.element{
+	width : 500px;
+	heigth : 100%;
+	margin : 0 auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
