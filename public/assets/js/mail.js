@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
   // reference your database
   var contactFormDB = firebase.database().ref("mywebhosting");
   
-  document.getElementById("contact").addEventListener("submit", submitForm);
+  document.getElementById("contactForm").addEventListener("submit", submitForm);
   
   function submitForm(e) {
     e.preventDefault();
@@ -42,7 +42,7 @@ const app = initializeApp(firebaseConfig);
     }, 3000);
   
     //   reset the form
-    document.getElementById("contact").reset();
+    document.getElementById("contactForm").reset();
   }
   
   const saveMessages = (name, emailid, msgContent) => {
