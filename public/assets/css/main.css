@@ -3767,7 +3767,7 @@ canvas {
 
     
     border-radius: 5%;
-    background:radial-gradient(transparent 0 60%, RGB(0,240,160) 60%, RGBa(120,0,240,0) 70%) */
+    background:radial-gradient(transparent 0 60%, RGB(0,240,160) 60%, RGBa(120,0,240,0) 70%)
 
 }
 
@@ -4524,7 +4524,7 @@ button.next:after,
     position: absolute;
     right: 1.5em;
     top: 0;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     width: 36px;
 }
 

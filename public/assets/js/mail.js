@@ -1,60 +1,41 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
+import { getDatabase, ref, set, get, child } from "firebase/database";
+ 
+// Paste the code from Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCmTngTj-B20rj_M5FDPUOYtEt200S2Kek",
   authDomain: "mywebhosting-64186.firebaseapp.com",
   projectId: "mywebhosting-64186",
   storageBucket: "mywebhosting-64186.appspot.com",
   messagingSenderId: "714492160420",
-  appId: "1:714492160420:web:d1a4099f134128ba20b931"
+  appId: "1:714492160420:web:d1a4099f134128ba20b931",
+  // The value of `databaseURL` depends on the location of the database
+  databaseURL: "https://mywebhosting-64186-default-rtdb.firebaseio.com/"
 };
-
+ 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-  
-  // initialize firebase
-  firebase.initializeApp(firebaseConfig);
-  
-  // reference your database
-  var contactFormDB = firebase.database().ref("mywebhosting");
-  
-  document.getElementById("contactForm").addEventListener("submit", submitForm);
-  
-  function submitForm(e) {
+ 
+// Get a reference to the database service
+const db = getDatabase(app);
+ 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-  
-    var name = getElementVal("name");
-    var emailid = getElementVal("email");
-    var msgContent = getElementVal("message");
-  
-    saveMessages(name, emailid, msgContent);
-  
-    //   enable alert
-    document.querySelector(".SentAlert").style.display = "block";
-  
-    //   remove the alert
-    setTimeout(() => {
-      document.querySelector(".SentAlert").style.display = "none";
-    }, 3000);
-  
-    //   reset the form
-    document.getElementById("contactForm").reset();
-  }
-  
-  const saveMessages = (name, emailid, msgContent) => {
-    var newContactForm = contactFormDB.push();
-  
-    newContactForm.set({
-      name: name,
-      emailid: emailid,
-      msgContent: msgContent,
+    set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        date: formatedTimestamp()
     });
-  };
-  
-  const getElementVal = (id) => {
-    return document.getElementById(id).value;
-  };
+ 
+    alert('Your form is submitted');
+    document.getElementById('contactForm').reset();
+});
+
+const formatedTimestamp = ()=> {
+  const d = new Date()
+  const date = d.toISOString().split('T')[0];
+  const time = d.toTimeString().split(' ')[0];
+  return `${date} ${time}`
+}
