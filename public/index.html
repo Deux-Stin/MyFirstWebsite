@@ -3,8 +3,6 @@
 	Helios by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-	fiouuuuuuuuu
 -->
 <html>
 
@@ -22,6 +20,7 @@
 </head>
 
 <body class="homepage is-preload light-bg">
+    <!-- onload="initializeApp()" -->
 
     <!-- WhoAmI -->
     <div id="WhoAmI">
@@ -234,7 +233,7 @@
             <div id="contact">
                 <div class="inner">
                     <!-- <section> -->
-                    <form method="post" action="" id="contactForm">
+                    <form method="post" id="contactForm">
                         <!-- <?php include('formulaire.php'); ?> -->
 
                         <header>
@@ -247,8 +246,6 @@
 
                         <div class="overlay-form-for-light-page">
                             <div class="fields">
-                                <div class="SentAlert">Your message sent</div>
-
                                 <div class="field half">
                                     <label for="name">Name</label>
                                     <input type="text" name="name" id="name" />
@@ -631,6 +628,18 @@
         });
         ScrollOut();
     </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+
+
+    <!-- <script src="./dbconf.js"></script> -->
+    <script src="./assets/js/realtime_db.js"></script>
 
 </body>
 

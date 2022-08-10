@@ -3767,7 +3767,7 @@ canvas {
 
     
     border-radius: 5%;
-    background:radial-gradient(transparent 0 60%, RGB(0,240,160) 60%, RGBa(120,0,240,0) 70%) */
+    background:radial-gradient(transparent 0 60%, RGB(0,240,160) 60%, RGBa(120,0,240,0) 70%)
 
 }
 
@@ -4524,7 +4524,7 @@ button.next:after,
     position: absolute;
     right: 1.5em;
     top: 0;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     width: 36px;
 }
 
@@ -4962,14 +4962,3 @@ button:disabled,
 
 /* End of separator */
 
-/* When user clicks on submit contact form, it goes in firebase database not by mail */
-.SentAlert{
-    width: 100%;
-    background: rgb(0, 255, 106);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 900;
-    display: none;
-}
