@@ -31,7 +31,7 @@ function submitForm(e) {
   } else {
     saveMessage(name, email, message, date);
     alert("One small step for you, one giant leap for my mailing box ! Thanks :)");
-    document.getElementById("email-form").reset();
+    document.getElementById("contactForm").reset();
   }
 }
 
