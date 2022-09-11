@@ -41,7 +41,7 @@ function resizeElements(toGet, target) {
     let widthTarget = target;
 
     const text = toGet.textContent;
-    const font = "16px Poppins, sans-serif"
+    const font = "1rem Poppins, sans-serif"
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
     context.font = font;
